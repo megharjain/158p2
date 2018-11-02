@@ -16,7 +16,7 @@ void ikj_order(double *A, double *B, double *C, int N)
 	clock_gettime(CLOCK_MONOTONIC, start);
     
     
-    #pragma omp parallel for schedule(guided,8)
+    #pragma omp parallel for schedule(dynamic)
     
     for (int i = 0; i < N; i++) 
     {
